@@ -6,8 +6,9 @@ terraform {
     }
   }
 
-  backend "local" {
-    path = ".tfstate/terraform.tfstate"
+  backend "gcs" {
+    bucket = "haberr-terraform"
+    prefix = "cloudflare"
   }
 }
 
