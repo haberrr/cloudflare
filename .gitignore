@@ -1,0 +1,19 @@
+.tfstate/
+.terraform/
+
+*.tfstate
+*.tfstate.backup
+*.tfstate.*
+
+# Sensitive variable files
+*.auto.tfvars
+
+# Terraform lock file (optional)
+.terraform.lock.hcl
+
+# Ignore editor-specific files
+*.swp
+.idea/
+.vscode/
+.DS_Store
+
