@@ -1,4 +1,4 @@
-name: Deploy changes to the Cloudflare
+name: Plan changes to the Cloudflare
 
 on: workflow_dispatch
 
@@ -17,5 +17,5 @@ jobs:
           terraform_version: "1.9.8"
       - name: Terraform init
         run: terraform init
-      - name: Terraform apply
-        run: terraform apply -auto-approve
+      - name: Terraform plan
+        run: terraform plan
