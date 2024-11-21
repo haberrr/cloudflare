@@ -18,3 +18,4 @@ jobs:
       - name: Terraform plan
         env:
           TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: terraform plan -no-color
