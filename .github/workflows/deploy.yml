@@ -10,7 +10,6 @@ jobs:
       - uses: google-github-actions/auth@v2
         with:
           credentials_json: '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}'
-          token_format: access_token
       - uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: "1.9.8"
