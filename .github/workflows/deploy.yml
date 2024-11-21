@@ -1,7 +1,7 @@
 name: Deploy changes to the Cloudflare
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
   deploy:
