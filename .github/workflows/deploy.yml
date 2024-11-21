@@ -8,7 +8,7 @@ jobs:
     env:
       TF_VAR_cloudflare_api_token: '${{ secrets.CLOUDFLARE_API_TOKEN }}'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: google-github-actions/auth@v2
         with:
           credentials_json: '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}'
