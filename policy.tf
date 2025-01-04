@@ -33,3 +33,15 @@ resource "cloudflare_zero_trust_access_policy" "media-external" {
     ]
   }
 }
+
+resource "cloudflare_zero_trust_access_policy" "jellyfin_token" {
+  account_id = var.account_id
+  name       = "Mobile"
+  decision   = "non_identity"
+
+  include {
+    service_token = [
+      "1f2a6675-20b0-4d17-85af-f444bd5c899f"
+    ]
+  }
+}

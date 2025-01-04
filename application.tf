@@ -10,6 +10,7 @@ resource "cloudflare_zero_trust_access_application" "jellyfin" {
   session_duration            = "336h"
 
   policies = [
+    cloudflare_zero_trust_access_policy.jellyfin_token.id,
     cloudflare_zero_trust_access_policy.network.id,
     cloudflare_zero_trust_access_policy.family.id,
     cloudflare_zero_trust_access_policy.media-external.id,
