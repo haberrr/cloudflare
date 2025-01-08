@@ -45,3 +45,15 @@ resource "cloudflare_zero_trust_access_policy" "jellyfin_token" {
     ]
   }
 }
+
+resource "cloudflare_zero_trust_access_policy" "admin" {
+  account_id = var.account_id
+  name       = "Admin"
+  decision   = "allow"
+
+  include {
+    group = [
+      cloudflare_zero_trust_access_group.admin.id
+    ]
+  }
+}

@@ -17,3 +17,17 @@ resource "cloudflare_zero_trust_access_application" "jellyfin" {
   ]
 }
 
+resource "cloudflare_zero_trust_access_application" "cockpit-mini" {
+  account_id = var.account_id
+  name       = "Cockpit / Mini"
+  domain     = "cockpit.haberr.cc"
+  type       = "self_hosted"
+
+  allow_authenticate_via_warp = true
+  http_only_cookie_attribute  = true
+  logo_url                    = "https://raw.githubusercontent.com/cockpit-project/cockpit/refs/heads/main/src/ws/cockpit.png"
+
+  policies = [
+    cloudflare_zero_trust_access_policy.admin.id,
+  ]
+}
